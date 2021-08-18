@@ -16,3 +16,9 @@
         containerRegistry: 'Container Registry Connection'
         tags: |
           $(tag)
+  trigger:
+- '*'
+  variables:
+    buildConfiguration: 'Release'
+    webRepository: 'web'
+    tag: '$(Build.BuildId)'
